@@ -13,20 +13,28 @@ const links = [
   class="contents"
   @keyup.escape.window="open = false"
 >
-  <header class="flex flex-row items-center justify-between p-4">
-    <img src="/logo.png" class="h-12 w-auto" alt="Machukha Logo" />
+  <header class="flex flex-row items-center justify-between p-4 md:relative">
+    <div class="md:flex-1">
+      <img
+        src="/logo.png"
+        class="mx-auto h-12 w-auto md:h-16 lg:h-24 xl:h-32"
+        alt="Machukha Logo"
+      />
+    </div>
     <button
       @click="open = true"
       class="rounded p-2 hover:bg-white/10 focus-visible:outline-none md:hidden"
     >
       <img src="/hamburger.svg" alt="Open Menu" class="h-6 w-auto" />
     </button>
-    <ul class="hidden flex-row gap-2 md:flex">
+    <ul
+      class="absolute bottom-0 right-4 top-0 hidden flex-row content-center items-center gap-1 md:flex lg:gap-2"
+    >
       {
         links.map(({ label, href }) => (
           <li>
             <a
-              class="my-1 block rounded px-4 py-2 text-center text-lg hover:bg-white/10"
+              class="block h-full rounded px-4 py-2 text-center text-lg hover:bg-white/10 lg:text-xl xl:text-2xl"
               href={href}
             >
               {label}
@@ -67,5 +75,6 @@ const links = [
 <style>
   a {
     @apply font-serif;
+    font-variant-caps: small-caps;
   }
 </style>
