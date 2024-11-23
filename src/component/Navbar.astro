@@ -1,0 +1,71 @@
+---
+const links = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Live", href: "/live" },
+  { label: "Contact", href: "/contact" },
+] as const;
+---
+
+<div
+  x-data="{ open: false }"
+  @resize="open = false"
+  class="contents"
+  @keyup.escape.window="open = false"
+>
+  <header class="flex flex-row items-center justify-between p-4">
+    <img src="/logo.png" class="h-12 w-auto" alt="Machukha Logo" />
+    <button
+      @click="open = true"
+      class="rounded p-2 hover:bg-white/10 focus-visible:outline-none md:hidden"
+    >
+      <img src="/hamburger.svg" alt="Open Menu" class="h-6 w-auto" />
+    </button>
+    <ul class="hidden flex-row gap-2 md:flex">
+      {
+        links.map(({ label, href }) => (
+          <li>
+            <a
+              class="my-1 block rounded px-4 py-2 text-center text-lg hover:bg-white/10"
+              href={href}
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </header>
+
+  <div
+    x-cloak
+    x-show="open"
+    x-transition.opacity
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 md:hidden"
+    aria-hidden="true"
+    role="dialog"
+  >
+    <div @click.outside="open = false">
+      <ul>
+        {
+          links.map(({ label, href }) => (
+            <li>
+              <a
+                class="my-1 block w-32 rounded p-2 text-center text-lg hover:bg-white/10"
+                href={href}
+              >
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  a {
+    @apply font-serif;
+  }
+</style>

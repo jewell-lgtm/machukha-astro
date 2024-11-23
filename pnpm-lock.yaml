@@ -8,12 +8,21 @@ importers:
 
   .:
     dependencies:
+      '@astrojs/alpinejs':
+        specifier: ^0.4.0
+        version: 0.4.0(@types/alpinejs@3.13.10)(alpinejs@3.14.3)
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2)
       '@astrojs/tailwind':
         specifier: ^5.1.2
         version: 5.1.2(astro@4.16.14(rollup@4.27.4)(typescript@5.7.2))(tailwindcss@3.4.15)
+      '@types/alpinejs':
+        specifier: ^3.13.10
+        version: 3.13.10
+      alpinejs:
+        specifier: ^3.14.3
+        version: 3.14.3
       astro:
         specifier: ^4.16.13
         version: 4.16.14(rollup@4.27.4)(typescript@5.7.2)
@@ -49,6 +58,12 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@astrojs/alpinejs@0.4.0':
+    resolution: {integrity: sha512-68BY1CA0XuielLW3WdX2sfh9F4sSTnFqQ//IE9AditbiYJ77HJDb4uZx07pTFDtr1jOMU7lCvH+iS9gmNafM1g==}
+    peerDependencies:
+      '@types/alpinejs': ^3.0.0
+      alpinejs: ^3.0.0
 
   '@astrojs/check@0.9.4':
     resolution: {integrity: sha512-IOheHwCtpUfvogHHsvu0AbeRZEnjJg3MopdLddkJE70mULItS/Vh37BHcI00mcOJcH1vhD3odbpvWokpxam7xA==}
@@ -599,6 +614,9 @@ packages:
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
 
+  '@types/alpinejs@3.13.10':
+    resolution: {integrity: sha512-ah53tF6mWuuwerpDE7EHwbZErNDJQlsLISPqJhYj2RZ9nuTYbRknSkqebUd3igkhLIZKkPa7IiXjSn9qsU9O2w==}
+
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
 
@@ -664,6 +682,12 @@ packages:
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
 
+  '@vue/reactivity@3.1.5':
+    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
+
+  '@vue/shared@3.1.5':
+    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
+
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
@@ -671,6 +695,9 @@ packages:
 
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
+
+  alpinejs@3.14.3:
+    resolution: {integrity: sha512-cL8JBEDAm4UeVjTN5QnFl8QgMGUwxFn1GvQvu3RtfAHUrAPRahGihrsWpKnEK9L0QMqsAPk/R8MylMWKHaK33A==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -2302,6 +2329,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@astrojs/alpinejs@0.4.0(@types/alpinejs@3.13.10)(alpinejs@3.14.3)':
+    dependencies:
+      '@types/alpinejs': 3.13.10
+      alpinejs: 3.14.3
+
   '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2)':
     dependencies:
       '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2)
@@ -2820,6 +2852,8 @@ snapshots:
 
   '@shikijs/vscode-textmate@9.3.0': {}
 
+  '@types/alpinejs@3.13.10': {}
+
   '@types/babel__core@7.20.5':
     dependencies:
       '@babel/parser': 7.26.2
@@ -2917,6 +2951,12 @@ snapshots:
 
   '@vscode/l10n@0.0.18': {}
 
+  '@vue/reactivity@3.1.5':
+    dependencies:
+      '@vue/shared': 3.1.5
+
+  '@vue/shared@3.1.5': {}
+
   acorn@8.14.0: {}
 
   ajv@8.17.1:
@@ -2925,6 +2965,10 @@ snapshots:
       fast-uri: 3.0.3
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
+
+  alpinejs@3.14.3:
+    dependencies:
+      '@vue/reactivity': 3.1.5
 
   ansi-align@3.0.1:
     dependencies:
