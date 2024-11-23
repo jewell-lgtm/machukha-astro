@@ -3,5 +3,110 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Home">
-  <h1>Welcome to MACHUKHA</h1>
+  <div
+    class="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-6 px-12 py-4 md:grid-cols-2 lg:grid-cols-3"
+  >
+    <a
+      href="https://machukha.bandcamp.com/album/mochari"
+      target="_blank"
+      class="card col-span-1 flex flex-row md:col-span-2 lg:row-span-2"
+    >
+      <img
+        src="https://f4.bcbits.com/img/0037209990_36.jpg"
+        alt=""
+        width="400"
+        height="300"
+        class="flex-shrink-0"
+      />
+      <div class="flex h-full flex-1 flex-col items-center justify-center">
+        <h1 class="text-h1">"Mochari"</h1>
+        <h2 class="text-subtitle">LP Out Now</h2>
+      </div>
+    </a>
+    <div class="card col-span-1 flex flex-col items-center justify-center">
+      <h1 class="text-2xl font-bold">
+        <h3 class="text-h1">Buy our merch</h3>
+        <h4 class="text-subtitle">We're poor as shit</h4>
+      </h1>
+    </div>
+    <div class="card col-span-1 flex flex-col items-center justify-center">
+      <h4 class="text-h1">We're on socials</h4>
+      <h5 class="text-subtitle">For all the good that does us</h5>
+    </div>
+  </div>
+
+  <section class="">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+      <div class="mx-auto max-w-screen-md sm:text-center">
+        <h2 class="text-h1">Sign up for our newsletter</h2>
+        <p class="mx-auto mb-8 max-w-2xl text-gray-500 md:mb-12">
+          Stay up to date with the roadmap progress, announcements and exclusive
+          discounts feel free to sign up with your email.
+        </p>
+        <form action="#">
+          <div
+            class="mx-auto mb-3 max-w-screen-sm items-center space-y-4 sm:flex sm:space-y-0"
+          >
+            <div class="relative w-full">
+              <label
+                for="email"
+                class="mb-2 hidden text-sm font-medium text-gray-300"
+                >Email address</label
+              >
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                  ></path><path
+                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                  ></path></svg
+                >
+              </div>
+              <input
+                class="block w-full rounded-lg border border-r-0 border-gray-600 bg-gray-700 p-3 pl-10 text-sm text-white placeholder-gray-400 focus:border-primary-500 focus:ring-primary-500 sm:rounded-none sm:rounded-l-lg"
+                placeholder="Enter your email"
+                type="email"
+                id="email"
+                required=""
+              />
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="w-full cursor-pointer rounded-lg border border-primary-900 bg-primary px-5 py-3 text-center text-sm font-medium text-white hover:bg-primary-800 focus:ring-4 focus-visible:ring-primary-300 sm:rounded-none sm:rounded-r-lg"
+                >Subscribe</button
+              >
+            </div>
+          </div>
+          <div
+            class="newsletter-form-footer mx-auto max-w-screen-sm text-left text-sm text-gray-500 dark:text-gray-300"
+          >
+            We care about the protection of your data. <a
+              href="#"
+              class="font-medium text-primary hover:underline"
+              >Read our Privacy Policy</a
+            >.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 </MainLayout>
+
+<style>
+  .card {
+    @apply rounded-lg bg-dirtypink p-4;
+  }
+  a.card {
+    @apply transition-transform hover:scale-[102%];
+  }
+  img {
+    @apply max-w-full;
+  }
+</style>
